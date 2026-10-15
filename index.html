@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ôn tập Chương I: Mệnh đề và tập hợp – Toán 10</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f8fb;--grid:#dbe4f0;--card:#fff;--ink:#1b2a4a;--mut:#5b6b88;--ac:#e8a200;--acf:#fff3cf;--ok:#1f8a5b;--okb:#dff5e9;--bad:#c9442f;--badb:#fde5e0;--line:#c9d4e6;--pri:#2447b8;--prif:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1626;--grid:#1c2740;--card:#17213a;--ink:#e6ecf8;--mut:#9fb0cf;--ac:#f4bd3a;--acf:#3a3115;--ok:#55d19a;--okb:#143427;--bad:#ff8a73;--badb:#401e19;--line:#2b3a5c;--pri:#7f9cff;--prif:#0f1626}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;color:var(--ink);font:16px/1.6 'Be Vietnam Pro',system-ui,sans-serif}
+main{max-width:860px;margin:0 auto;padding:12px 14px 60px}
+h1{font:600 clamp(24px,6vw,36px)/1.2 'Source Serif 4',Georgia,serif;margin:14px 0 4px}
+h2{font:600 22px 'Source Serif 4',Georgia,serif;margin:0 0 8px}
+.sub{color:var(--mut);margin:0 0 12px}
+nav{display:flex;gap:6px;overflow-x:auto;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:8px 0;z-index:5}
+nav button{flex:none;border:1.5px solid var(--line);background:var(--card);color:var(--ink);padding:9px 14px;border-radius:10px;font:inherit;font-weight:500;cursor:pointer}
+nav button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+details.card summary{font-weight:700;cursor:pointer}
+.f{font:italic 400 18px/1.7 'Source Serif 4',serif;background:var(--acf);border-left:4px solid var(--ac);padding:8px 12px;margin:8px 0;overflow-x:auto}
+.tw{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;min-width:100%;font-size:15px}
+th,td{border:1px solid var(--line);padding:6px 10px;text-align:center}
+th{background:var(--acf)}
+button.b{background:var(--pri);color:var(--prif);border:0;border-radius:10px;padding:11px 18px;font:inherit;font-weight:700;cursor:pointer}
+button.b.g{background:transparent;color:var(--pri);border:1.5px solid var(--pri)}
+input,select{font:inherit;padding:10px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);width:100%;margin:4px 0}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.set{display:flex;flex-direction:column;gap:6px}
+.tag{display:inline-block;font-size:13px;padding:1px 9px;border-radius:99px;background:var(--acf);border:1px solid var(--ac);margin-right:4px}
+.q{border-top:1px dashed var(--line);padding:14px 0}
+.q:first-child{border:0}
+.opt{display:block;width:100%;text-align:left;margin:6px 0;padding:10px 12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;font:inherit;cursor:pointer}
+.opt.sel{border-color:var(--pri);background:var(--acf)}
+.opt.ok{border-color:var(--ok);background:var(--okb)}.opt.no{border-color:var(--bad);background:var(--badb)}
+.tf{display:grid;grid-template-columns:1fr auto auto;gap:6px;align-items:center;margin:6px 0}
+.tf button{padding:8px 12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;font:inherit;cursor:pointer}
+.tf button.sel{background:var(--pri);color:var(--prif);border-color:var(--pri)}
+.tf button.ok{background:var(--ok);color:#fff;border-color:var(--ok)}.tf button.no{background:var(--bad);color:#fff;border-color:var(--bad)}
+.bar{position:sticky;top:calc(env(safe-area-inset-top,0px) + 54px);z-index:4;display:flex;justify-content:space-between;align-items:center;background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:10px}
+.ex{background:var(--okb);border-left:4px solid var(--ok);padding:8px 12px;margin-top:8px;border-radius:6px}
+.big{font:700 44px/1 'Source Serif 4',serif}
+.hide{display:none}
+@media(prefers-reduced-motion:no-preference){.card{transition:border-color .2s}}
+</style></head><body><main>
+<h1>Mệnh đề và tập hợp</h1>
+<p class="sub">Ôn tập Chương I, Toán 10 · Kết nối tri thức với cuộc sống<br>Thầy Nguyễn Hữu Trung · THPT Trần Phú · 0964 848 989</p>
+<div id="who" class="card"></div>
+<nav id="nav"></nav><div id="v"></div></main>
+<script>
+const $=s=>document.querySelector(s);
+const tb=(h,r)=>`<div class="tw"><table><tr>${h.map(x=>`<th>${x}</th>`).join('')}</tr>${r.map(a=>`<tr>${a.map(x=>`<td>${x}</td>`).join('')}</tr>`).join('')}</table></div>`;
+const LS={g(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},s(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const mc=(id,lv,q,o,a,e)=>({id,t:'mc',lv,q,o,a,e}),tf=(id,lv,q,o,a,e)=>({id,t:'tf',lv,q,o,a,e}),sa=(id,lv,q,a,tol,e)=>({id,t:'sa',lv,q,a,tol,e});
+const B={};[
+mc('m1',1,'Câu nào sau đây là mệnh đề?',['Hà Nội là thủ đô của Việt Nam.','Hôm nay trời đẹp quá!','x + 2 = 5','Bạn có đi học không?'],0,'Mệnh đề là khẳng định có tính đúng hoặc sai. Câu cảm thán, câu hỏi và mệnh đề chứa biến chưa gán giá trị thì không phải mệnh đề.'),
+mc('m2',1,'Phủ định của mệnh đề “Số 15 chia hết cho 5” là',['Số 15 không chia hết cho 5','Số 15 chia hết cho 3','Số 5 chia hết cho 15','Số 15 là số nguyên tố'],0,'Mệnh đề phủ định P̄ của P đúng khi P sai và ngược lại.'),
+mc('m3',1,'Mệnh đề P ⇒ Q chỉ sai khi',['P đúng, Q sai','P sai, Q đúng','P sai, Q sai','P đúng, Q đúng'],0,'Bảng chân trị của P ⇒ Q: chỉ sai ở dòng P đúng, Q sai.'),
+mc('m4',1,'Mệnh đề “∀x ∈ ℝ, x² ≥ 0” là mệnh đề',['Đúng','Sai','Chứa biến','Không xác định'],0,'Bình phương của mọi số thực đều không âm.'),
+mc('m5',1,'Phủ định của mệnh đề “∃x ∈ ℝ, x² = 2” là',['∀x ∈ ℝ, x² ≠ 2','∃x ∈ ℝ, x² ≠ 2','∀x ∈ ℝ, x² = 2','∃x ∈ ℝ, x² > 2'],0,'Phủ định của ∃ là ∀ và phủ định của “=” là “≠”.'),
+mc('m6',2,'Cho A = {1; 2; 3}, B = {2; 3; 4}. Tập A ∩ B là',['{2; 3}','{1; 4}','{1; 2; 3; 4}','{1}'],0,'A ∩ B gồm các phần tử thuộc cả A và B.'),
+mc('m7',2,'Cho A = {1; 2; 3}, B = {2; 3; 4}. Tập A ∪ B là',['{1; 2; 3; 4}','{2; 3}','{1; 4}','{1; 2; 3}'],0,'A ∪ B gồm các phần tử thuộc A hoặc thuộc B.'),
+mc('m8',2,'Kết quả của [−2; 3) ∩ (0; 5] là',['(0; 3)','[−2; 5]','(0; 3]','[−2; 0]'],0,'Lấy phần chung: lớn hơn 0 và nhỏ hơn 3, nên là (0; 3).'),
+mc('m9',2,'Phủ định của mệnh đề “∀x ∈ ℝ, x² − x + 1 > 0” là',['∃x ∈ ℝ, x² − x + 1 ≤ 0','∀x ∈ ℝ, x² − x + 1 ≤ 0','∃x ∈ ℝ, x² − x + 1 > 0','∀x ∈ ℝ, x² − x + 1 < 0'],0,'Phủ định của ∀ là ∃ và phủ định của “>” là “≤”.'),
+mc('m10',3,'Lớp 10A có 40 học sinh: 25 em học tiếng Anh, 18 em học tiếng Pháp, 5 em học cả hai. Số em không học ngoại ngữ nào là',['2','3','7','12'],0,'n(A ∪ B) = 25 + 18 − 5 = 38, nên số em không học là 40 − 38 = 2.'),
+mc('m11',3,'Số tập con của tập hợp {a; b; c} là',['6','7','8','9'],2,'Tập n phần tử có 2ⁿ tập con, 2³ = 8 (kể cả ∅ và chính nó).')
+].forEach(x=>B[x.id]=x);
+[
+tf('t1',1,'Xét các phát biểu về mệnh đề và tập hợp:',['Mệnh đề phủ định của P đúng khi P sai','P ⇒ Q sai khi P sai và Q đúng','P ⇔ Q đúng khi P, Q cùng đúng hoặc cùng sai','Mọi tập hợp đều là tập con của chính nó'],[1,0,1,1],'P ⇒ Q chỉ sai khi P đúng, Q sai; A ⊂ A với mọi tập A.'),
+tf('t2',2,'Với n là số tự nhiên, xét các mệnh đề:',['“Nếu n chia hết cho 6 thì n chia hết cho 3” là đúng','Mệnh đề đảo của (a) là đúng','“n chia hết cho 6 ⇔ n chia hết cho 2 và cho 3” là đúng','“∀n ∈ ℕ, n² > n” là đúng'],[1,0,1,0],'Đảo của (a) sai (n = 3). Với n = 0 hoặc n = 1 thì n² > n sai, nên (d) sai.'),
+tf('t3',2,'Cho A = [−1; 4] và B = (2; 6). Khi đó:',['A ∩ B = (2; 4]','A ∪ B = [−1; 6)','A \\ B = [−1; 2)','ℝ \\ B = (−∞; 2) ∪ (6; +∞)'],[1,1,0,0],'A \\ B = [−1; 2] (số 2 ∈ A, 2 ∉ B); ℝ \\ B = (−∞; 2] ∪ [6; +∞).'),
+tf('t4',3,'Lớp có 45 học sinh, 30 em chơi bóng đá, 20 em chơi cầu lông, 8 em chơi cả hai môn:',['Số em chơi ít nhất một môn là 42','Số em chỉ chơi bóng đá là 22','Số em chỉ chơi cầu lông là 12','Số em không chơi môn nào là 5'],[1,1,1,0],'n(A ∪ B) = 30 + 20 − 8 = 42; chỉ bóng đá 30 − 8 = 22; chỉ cầu lông 12; không chơi môn nào 45 − 42 = 3.'),
+tf('t5',3,'Xét mệnh đề “Nếu hôm nay mưa thì đường ướt” (P ⇒ Q):',['Mưa và đường ướt thì mệnh đề đúng','Không mưa mà đường vẫn ướt (do xe tưới nước) thì mệnh đề vẫn đúng','Mưa mà đường không ướt thì mệnh đề đúng','Mệnh đề đảo “Nếu đường ướt thì hôm nay mưa” luôn đúng'],[1,1,0,0],'P ⇒ Q chỉ sai khi P đúng, Q sai. Mệnh đề đảo không luôn đúng vì đường ướt còn do nhiều nguyên nhân khác.')
+].forEach(x=>B[x.id]=x);
+[
+sa('s1',1,'Tập hợp có 3 phần tử thì có bao nhiêu tập con?',8,0,'2³ = 8.'),
+sa('s2',2,'Có bao nhiêu số nguyên thuộc nửa khoảng [−3; 2)?',5,0,'Gồm −3, −2, −1, 0, 1.'),
+sa('s3',2,'Cho A = {x ∈ ℕ | x ≤ 5} và B = {x ∈ ℕ | 3 ≤ x ≤ 8}. Tập A ∩ B có bao nhiêu phần tử?',3,0,'A ∩ B = {3; 4; 5}.'),
+sa('s4',2,'Lớp 40 học sinh có 25 em giỏi Toán, 18 em giỏi Lý, 8 em giỏi cả hai. Có bao nhiêu em giỏi ít nhất một trong hai môn?',35,0,'25 + 18 − 8 = 35.'),
+sa('s5',2,'Cho A = {1; 2; 3; 4; 5; 6} và B = {2; 4; 6; 8}. Tập A \\ B có bao nhiêu phần tử?',3,0,'A \\ B = {1; 3; 5}.'),
+sa('s6',3,'Lớp 45 học sinh: 28 em thích bóng đá, 22 em thích bóng chuyền, 5 em không thích môn nào. Có bao nhiêu em thích cả hai môn?',10,0,'Thích ít nhất một môn: 45 − 5 = 40. Thích cả hai: 28 + 22 − 40 = 10.'),
+sa('s7',3,'Cho A = (−∞; 3] và B = (−2; +∞). Có bao nhiêu số nguyên thuộc A ∩ B?',5,0,'A ∩ B = (−2; 3] chứa −1, 0, 1, 2, 3.'),
+sa('s8',3,'Cho A = {x ∈ ℤ | |x| ≤ 2}. Số tập con của A là bao nhiêu?',32,0,'A = {−2; −1; 0; 1; 2} có 5 phần tử nên có 2⁵ = 32 tập con.')
+].forEach(x=>B[x.id]=x);
+[
+mc('m12',1,'Câu nào sau đây là mệnh đề chứa biến?',['x + 3 > 5','2 + 3 = 5','Hà Nội là thủ đô của Việt Nam','9 là số lẻ'],0,'“x + 3 > 5” chưa xác định đúng/sai cho tới khi gán giá trị cho x.'),
+mc('m13',1,'Cho P: “Tứ giác là hình vuông”, Q: “Tứ giác là hình chữ nhật”. Mệnh đề P ⇒ Q là',['Nếu tứ giác là hình vuông thì tứ giác là hình chữ nhật','Nếu tứ giác là hình chữ nhật thì tứ giác là hình vuông','Tứ giác là hình vuông khi và chỉ khi nó là hình chữ nhật','Tứ giác không là hình vuông'],0,'P ⇒ Q đọc là “Nếu P thì Q”.'),
+mc('m14',1,'Phủ định của mệnh đề “Bạn An cao hơn 1,7 m” là',['Bạn An cao nhiều nhất 1,7 m','Bạn An cao dưới 1,7 m','Bạn An thấp hơn 1,7 m','Bạn An cao đúng 1,7 m'],0,'Phủ định của “>” là “≤”, tức là cao nhiều nhất 1,7 m (kể cả đúng 1,7 m).'),
+mc('m15',1,'Tập hợp A = {x ∈ ℕ | x < 4} viết bằng cách liệt kê là',['{0; 1; 2; 3}','{1; 2; 3}','{0; 1; 2; 3; 4}','{1; 2; 3; 4}'],0,'ℕ gồm cả số 0.'),
+mc('m16',1,'Kí hiệu nào sau đây đúng?',['−3 ∈ ℤ','√2 ∈ ℚ','0,5 ∈ ℕ','π ∈ ℚ'],0,'√2 và π là số vô tỉ; 0,5 không là số tự nhiên.'),
+mc('m17',2,'Mệnh đề đảo của “Nếu a và b cùng chia hết cho 3 thì a + b chia hết cho 3” là',['Nếu a + b chia hết cho 3 thì a và b cùng chia hết cho 3','Nếu a + b không chia hết cho 3 thì a, b không cùng chia hết cho 3','Nếu a chia hết cho 3 thì b chia hết cho 3','a + b chia hết cho 3 khi a, b chẵn'],0,'Đảo của P ⇒ Q là Q ⇒ P.'),
+mc('m18',2,'Mệnh đề nào sau đây đúng?',['n chia hết cho 5 ⇔ n có chữ số tận cùng là 0 hoặc 5','n chia hết cho 3 ⇔ n chia hết cho 9','Tam giác cân ⇔ tam giác đều','n² chia hết cho 4 ⇔ n chia hết cho 4'],0,'Phản ví dụ: n = 3 (3 | 3 nhưng 9 ∤ 3); tam giác cân chưa chắc đều; n = 2 thì 4 | n² nhưng 4 ∤ 2.'),
+mc('m19',2,'Phủ định của “∃n ∈ ℕ, n² + 1 chia hết cho 4” là',['∀n ∈ ℕ, n² + 1 không chia hết cho 4','∃n ∈ ℕ, n² + 1 không chia hết cho 4','∀n ∈ ℕ, n² + 1 chia hết cho 4','∃n ∈ ℕ, n² chia hết cho 4'],0,'Đổi ∃ thành ∀ và phủ định phần điều kiện.'),
+mc('m20',2,'Cho A = (−∞; 2], B = (−1; 5). Tập A ∩ B là',['(−1; 2]','(−∞; 5)','[−1; 2)','(2; 5)'],0,'Phần chung: lớn hơn −1 và không quá 2.'),
+mc('m21',2,'Cho A = (−∞; 2], B = (−1; 5). Tập A ∪ B là',['(−∞; 5)','(−1; 2]','(−∞; 2]','(−1; 5)'],0,'Hợp của hai tập phủ từ −∞ đến 5 (không lấy 5).'),
+mc('m22',2,'Cho A = [1; 6], B = (3; 8). Tập A \\ B là',['[1; 3]','[1; 3)','(3; 6]','[1; 6]'],0,'Số 3 thuộc A nhưng không thuộc B nên được giữ lại.'),
+mc('m23',2,'Cho A = (−∞; −1) ∪ [3; +∞). Phần bù của A trong ℝ là',['[−1; 3)','(−1; 3]','(−1; 3)','[−1; 3]'],0,'−1 ∉ A nên thuộc phần bù; 3 ∈ A nên không thuộc phần bù.'),
+mc('m24',2,'Số phần tử của tập {x ∈ ℤ | −2 < x ≤ 3} là',['5','6','4','3'],0,'Gồm −1, 0, 1, 2, 3.'),
+mc('m25',2,'Tổ có 12 em: 7 em thích Văn, 8 em thích Sử, 4 em thích cả hai. Số em thích ít nhất một môn là',['11','15','12','4'],0,'7 + 8 − 4 = 11.'),
+mc('m26',3,'Khảo sát 100 khách quán: 60 người uống cà phê, 45 người uống trà, 20 người uống cả hai. Số người không uống thứ nào là',['15','25','35','5'],0,'n(A ∪ B) = 60 + 45 − 20 = 85; 100 − 85 = 15.'),
+mc('m27',3,'Cho n(A) = 30, n(B) = 25, n(A ∪ B) = 45. Khi đó n(A ∩ B) bằng',['10','5','15','20'],0,'n(A ∩ B) = 30 + 25 − 45 = 10.'),
+mc('m28',3,'Lớp 40 em: 22 em biết bơi, 20 em chơi bóng đá, 7 em làm được cả hai. Số em chỉ biết bơi là',['15','13','22','18'],0,'22 − 7 = 15.'),
+mc('m29',3,'Cho A = [m; m + 2], B = [1; 4]. Giá trị m để A ⊂ B là',['[1; 2]','(1; 2)','[1; 4]','[−1; 2]'],0,'Cần m ≥ 1 và m + 2 ≤ 4, tức 1 ≤ m ≤ 2.'),
+mc('m30',3,'Tập {1; 2; 3; 4} có bao nhiêu tập con gồm đúng 2 phần tử?',['6','4','8','12'],0,'Liệt kê: {1;2},{1;3},{1;4},{2;3},{2;4},{3;4}.')
+].forEach(x=>B[x.id]=x);
+[
+tf('t6',1,'Về mệnh đề:',['“2 + 3 = 5” là mệnh đề đúng','“x + 3 > 5” là một mệnh đề','Phủ định của “7 là số chẵn” là “7 là số lẻ”','“Hôm nay trời đẹp quá!” là một mệnh đề'],[1,0,1,0],'Mệnh đề chứa biến và câu cảm thán không phải mệnh đề.'),
+tf('t7',2,'Cho P: “Học sinh có điểm trung bình ≥ 8,0”, Q: “Học sinh được xét học bổng”. Xét P ⇒ Q:',['P là điều kiện đủ để có Q','Q là điều kiện cần để có P','Nếu P đúng mà Q sai thì P ⇒ Q đúng','Mệnh đề đảo là “Nếu được xét học bổng thì điểm trung bình ≥ 8,0”'],[1,1,0,1],'P ⇒ Q sai khi P đúng, Q sai.'),
+tf('t8',2,'Cho A = {x ∈ ℝ | x² − 3x + 2 = 0} và B = {1; 2; 3}:',['A = {1; 2}','A ⊂ B','A ∩ B = B','B \\ A = {3}'],[1,1,0,1],'A ∩ B = {1; 2} ≠ B.'),
+tf('t9',2,'Về phủ định mệnh đề:',['Phủ định của “∀x ∈ ℝ, x² + 1 > 0” là “∃x ∈ ℝ, x² + 1 ≤ 0”','“∃x ∈ ℝ, x² + 1 ≤ 0” là mệnh đề đúng','“∀x ∈ ℝ, x² + 1 > 0” là mệnh đề đúng','Phủ định của “∃x ∈ ℤ, 2x = 1” là “∀x ∈ ℤ, 2x ≠ 1”'],[1,0,1,1],'x² + 1 ≥ 1 > 0 với mọi x thực.'),
+tf('t10',3,'Khảo sát 100 học sinh: 60 em thích Toán, 50 em thích Tin, 20 em thích cả hai:',['Số em thích ít nhất một môn là 90','Số em chỉ thích Toán là 40','Số em chỉ thích Tin là 20','Số em không thích môn nào là 10'],[1,1,0,1],'60 + 50 − 20 = 90; chỉ Toán 40; chỉ Tin 30; không thích: 10.'),
+tf('t11',3,'Cho A = [m; m + 2], B = [1; 4]:',['Khi m = 1 thì A ⊂ B','Khi m = 3 thì A ⊂ B','A ⊂ B ⇔ 1 ≤ m ≤ 2','Khi m = 0 thì A ∩ B = [1; 2]'],[1,0,1,1],'m = 3 thì A = [3; 5] có 5 ∉ B.'),
+tf('t12',3,'Tập A = {1; 2; 3; 4}:',['A có 16 tập con','A có 5 tập con gồm đúng 1 phần tử','A có 6 tập con gồm đúng 2 phần tử','A có 15 tập con khác ∅ và khác A'],[1,0,1,0],'Có 4 tập con 1 phần tử; số tập con khác ∅ và khác A là 16 − 2 = 14.')
+].forEach(x=>B[x.id]=x);
+[
+sa('s9',1,'Trong các câu: (1) 5 > 3; (2) x + 1 = 2; (3) Hôm nay là thứ Hai?; (4) 7 là số chẵn. Có bao nhiêu câu là mệnh đề?',2,0,'Chỉ (1) và (4).'),
+sa('s10',1,'Mệnh đề “Nếu 2 + 2 = 5 thì 3 > 4” đúng hay sai? Ghi 1 nếu đúng, 0 nếu sai.',1,0,'P sai nên P ⇒ Q đúng.'),
+sa('s11',2,'Có bao nhiêu số nguyên thuộc khoảng (−4; 3)?',6,0,'Gồm −3, −2, −1, 0, 1, 2.'),
+sa('s12',2,'Tập {x ∈ ℕ | 2x < 15} có bao nhiêu phần tử?',8,0,'x ≤ 7 nên x ∈ {0; 1; …; 7}.'),
+sa('s13',2,'Tập hợp A có 4 phần tử. Số tập con của A là bao nhiêu?',16,0,'2⁴ = 16.'),
+sa('s14',2,'Lớp 50 em, 30 em giỏi Toán, 25 em giỏi Văn, mỗi em giỏi ít nhất một trong hai môn. Có bao nhiêu em giỏi cả hai môn?',5,0,'30 + 25 − 50 = 5.'),
+sa('s15',3,'Có bao nhiêu số nguyên m để A = [m; m + 2] là tập con của B = [1; 4]?',2,0,'1 ≤ m ≤ 2 nên m ∈ {1; 2}.'),
+sa('s16',3,'Khảo sát 200 người: 120 người dùng điện thoại A, 90 người dùng điện thoại B, 30 người dùng cả hai. Có bao nhiêu người không dùng loại nào?',20,0,'200 − (120 + 90 − 30) = 20.'),
+sa('s17',3,'Cho A = [−5; 2) và B = (−2; 4]. Có bao nhiêu số nguyên thuộc A \\ B?',4,0,'A \\ B = [−5; −2] gồm −5, −4, −3, −2.'),
+sa('s18',3,'Có bao nhiêu tập X thỏa {1; 2} ⊂ X ⊂ {1; 2; 3; 4; 5}?',8,0,'X chứa 1, 2 và một tập con tùy ý của {3; 4; 5}: 2³ = 8.')
+].forEach(x=>B[x.id]=x);
+Object.values(B).forEach(q=>{if(q.t=='mc'&&q.a===0){const k=(+q.id.slice(1))%4;if(k){q.o=q.o.slice(4-k).concat(q.o.slice(0,4-k));q.a=k}}});
+const ST={
+g1:{n:'Nhóm 1 · Ôn lại lý thuyết',ids:['m1','m2','m3','m4','m12','m14','m15','m16','t1','t6','s1','s9','s10'],min:0},
+g2a:{n:'Nhóm 2 · Trắc nghiệm 4 đáp án',ids:['m5','m6','m7','m8','m9','m10','m11','m13','m17','m18','m19','m20','m21','m22','m23','m24','m25','m26','m27','m28','m29','m30'],min:0},
+g2b:{n:'Nhóm 2 · Trắc nghiệm đúng / sai',ids:['t2','t3','t4','t5','t7','t8','t9','t10','t11','t12'],min:0},
+g2c:{n:'Nhóm 2 · Trả lời ngắn',ids:['s2','s3','s4','s5','s6','s7','s8','s11','s12','s13','s14','s15','s16','s17','s18'],min:0},
+e1:{n:'Đề ôn tập số 1',ids:['m1','m3','m12','m15','m6','m8','m17','m20','m24','m25','m10','m29','t6','t2','t8','t10','s1','s9','s2','s11','s6','s15'],min:45},
+e2:{n:'Đề ôn tập số 2',ids:['m2','m4','m13','m16','m18','m19','m21','m22','m7','m27','m26','m30','t1','t7','t9','t11','s10','s3','s13','s14','s7','s16'],min:45},
+e3:{n:'Đề ôn tập số 3',ids:['m5','m14','m12','m16','m23','m9','m20','m22','m25','m28','m11','m26','t6','t3','t5','t12','s5','s12','s4','s8','s17','s18'],min:50}};
+const TO={mc:0,tf:1,sa:2};Object.values(ST).forEach(s=>s.ids.sort((x,y)=>TO[B[x].t]-TO[B[y].t]||B[x].lv-B[y].lv));
+const LV=['','Nhận biết','Thông hiểu','Vận dụng'];
+let me=LS.g('me10',{name:'',cls:''}),tab='lt',run=null,tick=null,dbh=null,isT=false;
+function who(){$('#who').innerHTML=me.name?`<b>${me.name}</b> · lớp ${me.cls} <button class="b g" style="padding:5px 12px;margin-left:8px" onclick="me={name:'',cls:''};LS.s('me10',me);who()">Đổi</button>`:`<b>Nhập thông tin trước khi làm bài</b><div class="row"><input id="nm" placeholder="Họ và tên"><input id="cl" placeholder="Lớp (ví dụ 10A1)"></div><button class="b" onclick="saveMe()">Lưu</button>`}
+function saveMe(){const n=$('#nm').value.trim(),c=$('#cl').value.trim().toUpperCase();if(!n||!c)return alert('Hãy nhập đủ họ tên và lớp.');me={name:n,cls:c};LS.s('me10',me);who()}
+function nav(){const t=[['lt','Lý thuyết'],['lp','Luyện tập'],['de','Đề ôn tập'],['kq','Kết quả']];if(isT)t.push(['gv','Giáo viên']);$('#nav').innerHTML=t.map(([k,n])=>`<button class="${tab==k?'on':''}" onclick="go('${k}')">${n}</button>`).join('')}
+function go(t){if(run&&!confirm('Thoát bài đang làm? Bài chưa nộp sẽ không được lưu.'))return;stop();run=null;tab=t;nav();draw()}
+function draw(){const v=$('#v');scrollTo(0,0);
+if(tab=='lt')v.innerHTML=theory();
+else if(tab=='lp')v.innerHTML=['g1','g2a','g2b','g2c'].map(k=>setCard(k)).join('');
+else if(tab=='de')v.innerHTML=`<p class="sub">Mỗi đề 22 câu theo cấu trúc Bộ GD&ĐT: 12 câu trắc nghiệm 4 đáp án (0,25 điểm/câu), 4 câu đúng/sai (tối đa 1 điểm/câu), 6 câu trả lời ngắn (0,5 điểm/câu); thang điểm 10; tự nộp khi hết giờ.</p>`+['e1','e2','e3'].map(k=>setCard(k)).join('');
+else if(tab=='kq')hist();else teacher()}
+function setCard(k){const s=ST[k];return `<div class="card set"><h2>${s.n}</h2><span>${s.ids.length} câu${s.min?` · <b>${s.min} phút</b>`:' · không giới hạn thời gian'}</span><button class="b" onclick="start('${k}')">Bắt đầu làm</button></div>`}
+function theory(){return `<div class="card"><h2>Bản đồ kiến thức</h2><p>Chương I (Toán 10, Kết nối tri thức) gồm hai mạch: <b>Mệnh đề</b> (khẳng định đúng/sai, phủ định, kéo theo, tương đương, ∀ và ∃) và <b>Tập hợp</b> (tập con, khoảng/đoạn, giao, hợp, hiệu, phần bù). Hai mạch gặp nhau ở các bài toán đếm phần tử trong thực tiễn.</p></div>
+<details class="card" open><summary>1. Mệnh đề, mệnh đề chứa biến</summary><p>Mệnh đề là câu khẳng định có tính đúng hoặc sai (không thể vừa đúng vừa sai). Câu hỏi, câu cảm thán không phải mệnh đề. Mệnh đề chứa biến như “n chia hết cho 3” chỉ trở thành mệnh đề khi gán giá trị cho n.</p></details>
+<details class="card"><summary>2. Phủ định, kéo theo, đảo, tương đương</summary><div class="f">Phủ định của P: P̄ (đúng khi P sai)</div>${tb(['P','Q','P ⇒ Q','P ⇔ Q'],[['Đ','Đ','Đ','Đ'],['Đ','S','S','S'],['S','Đ','Đ','S'],['S','S','Đ','Đ']])}<p>Mệnh đề đảo của P ⇒ Q là Q ⇒ P. P ⇔ Q đúng khi cả P ⇒ Q và Q ⇒ P cùng đúng. Ngôn ngữ: “P là điều kiện đủ để có Q”, “Q là điều kiện cần để có P”.</p></details>
+<details class="card"><summary>3. Kí hiệu ∀, ∃ và phủ định</summary>${tb(['Mệnh đề','Phủ định'],[['∀x ∈ X, P(x)','∃x ∈ X, P̄(x)'],['∃x ∈ X, P(x)','∀x ∈ X, P̄(x)']])}<p>Khi phủ định, đổi ∀ ↔ ∃ và phủ định phần điều kiện (“>” thành “≤”, “=” thành “≠”).</p></details>
+<details class="card"><summary>4. Tập hợp, tập con, các tập số</summary><p>a ∈ A: a thuộc A. A ⊂ B: mọi phần tử của A đều thuộc B. A = B khi A ⊂ B và B ⊂ A. ∅ là tập con của mọi tập. Tập có n phần tử có 2ⁿ tập con. Ta có ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ.</p>${tb(['Kí hiệu','Tập hợp','Hiểu là'],[['[a; b]','{x ∈ ℝ | a ≤ x ≤ b}','đoạn'],['(a; b)','{x ∈ ℝ | a < x < b}','khoảng'],['[a; b)','{x ∈ ℝ | a ≤ x < b}','nửa khoảng'],['(−∞; a]','{x ∈ ℝ | x ≤ a}','nửa khoảng vô hạn']])}</details>
+<details class="card"><summary>5. Giao, hợp, hiệu, phần bù</summary>${tb(['Phép toán','Kí hiệu','Gồm các phần tử'],[['Giao','A ∩ B','thuộc cả A và B'],['Hợp','A ∪ B','thuộc A hoặc thuộc B'],['Hiệu','A \\ B','thuộc A nhưng không thuộc B'],['Phần bù','C<sub>E</sub>A = E \\ A','thuộc E nhưng không thuộc A (A ⊂ E)']])}<div class="f">n(A ∪ B) = n(A) + n(B) − n(A ∩ B)</div><p>Công thức này dùng cho bài toán đếm trong thực tiễn: học sinh tham gia hai câu lạc bộ, hai môn học, hai phương án khảo sát.</p></details>
+<div class="card"><h2>Ví dụ mẫu</h2><p>Lớp 40 học sinh: 25 em học tiếng Anh (A), 18 em học tiếng Pháp (B), 5 em học cả hai. Số em học ít nhất một thứ tiếng là n(A ∪ B) = 25 + 18 − 5 = 38. Số em không học ngoại ngữ nào là 40 − 38 = 2.</p>${tb(['Chỉ Anh','Chỉ Pháp','Cả hai','Không học'],[['20','13','5','2']])}</div>`}
+function start(k){if(!me.name)return alert('Hãy nhập họ tên và lớp ở phần trên trước.');const s=ST[k];run={k,a:{},t0:Date.now(),left:s.min*60,done:false};render();if(s.min){tick=setInterval(()=>{run.left--;const e=$('#tm');if(e)e.textContent=fmt(run.left);if(run.left<=0)submit()},1000)}}
+const fmt=x=>`${String(Math.floor(x/60)).padStart(2,'0')}:${String(x%60).padStart(2,'0')}`;
+function stop(){clearInterval(tick)}
+function render(){const s=ST[run.k],d=run.done;$('#v').innerHTML=`<div class="bar"><b>${s.n}</b><span id="tm">${s.min?fmt(run.left):'Tự do'}</span></div><div class="card">${s.ids.map((id,i)=>qh(B[id],i,d)).join('')}</div>`+(d?`<button class="b" onclick="go('lp')">Về danh sách</button>`:`<button class="b" onclick="if(confirm('Nộp bài?'))submit()">Nộp bài</button>`)}
+function qh(q,i,d){const a=run.a[q.id];let h=`<div class="q"><span class="tag">Câu ${i+1}</span><span class="tag">${LV[q.lv]}</span><div style="margin-top:6px">${q.q}</div>`;
+if(q.t=='mc')h+=q.o.map((o,j)=>`<button class="opt ${d?(j==q.a?'ok':a==j?'no':''):(a==j?'sel':'')}" ${d?'disabled':''} onclick="pick('${q.id}',${j})">${'ABCD'[j]}. ${o}</button>`).join('');
+else if(q.t=='tf')h+=q.o.map((o,j)=>{const v=(a||[])[j],c=q.a[j];const cl=x=>d?(c==x?'ok':v==x?'no':''):(v==x?'sel':'');return `<div class="tf"><span>${'abcd'[j]}) ${o}</span><button class="${cl(1)}" ${d?'disabled':''} onclick="tfp('${q.id}',${j},1)">Đúng</button><button class="${cl(0)}" ${d?'disabled':''} onclick="tfp('${q.id}',${j},0)">Sai</button></div>`}).join('');
+else h+=`<input inputmode="decimal" placeholder="Đáp số" value="${a??''}" ${d?'disabled':''} oninput="run.a['${q.id}']=this.value">`+(d?`<div>Đáp án: <b>${String(q.a).replace('.',',')}</b></div>`:'');
+if(d)h+=`<div class="ex">${q.e}</div>`;return h+'</div>'}
+function pick(id,j){run.a[id]=j;render()}
+function tfp(id,j,v){const a=run.a[id]||[];a[j]=v;run.a[id]=a;render()}
+function frac(q,a){if(q.t=='mc')return a===q.a?1:0;if(q.t=='tf'){let c=0;q.a.forEach((x,j)=>{if((a||[])[j]===x)c++});return[0,.1,.25,.5,1][c]}const v=parseFloat(String(a??'').replace(',','.'));return isFinite(v)&&Math.abs(v-q.a)<=q.tol+1e-9?1:0}
+async function submit(){if(!run||run.done)return;stop();run.done=true;const s=ST[run.k];const w=s.ids.map(id=>({mc:.25,tf:1,sa:.5})[B[id].t]);const f=s.ids.map(id=>frac(B[id],run.a[id]));const sc=Math.round(f.reduce((x,y,i)=>x+y*w[i],0)/w.reduce((x,y)=>x+y,0)*1000)/100,ok=f.filter(x=>x==1).length,sec=Math.min(Math.round((Date.now()-run.t0)/1000),s.min?s.min*60:1e5);
+const r={id:Date.now()+''+Math.floor(Math.random()*1e3),name:me.name,cls:me.cls,set:run.k,title:s.n,score:sc,ok,total:s.ids.length,sec,at:Date.now()};
+LS.s('h10',[r,...LS.g('h10',[])].slice(0,100));let msg='Đã lưu kết quả trên thiết bị này.';
+try{if(dbh){await dbh.collection('results').doc(r.id).set(r);msg='Đã gửi kết quả cho giáo viên.'}}catch(e){msg='Chưa gửi được cho giáo viên (cần quyền Contributor).'}
+render();$('#v').insertAdjacentHTML('afterbegin',`<div class="card" style="text-align:center"><div class="big">${String(sc).replace('.',',')}/10</div><p>Đúng hoàn toàn ${ok}/${r.total} câu · thời gian ${fmt(sec)}<br><small>${msg}</small></p></div>`);scrollTo(0,0)}
+function hist(){const h=LS.g('h10',[]);$('#v').innerHTML=`<div class="card"><h2>Thống kê điểm của bạn</h2>${h.length?(()=>{const m=h.map(x=>x.score);const by={};h.forEach(x=>{(by[x.title]=by[x.title]||[]).push(x.score)});return `<p>Số lần làm: <b>${h.length}</b> · Điểm TB: <b>${(m.reduce((a,b)=>a+b,0)/m.length).toFixed(1)}</b> · Cao nhất: <b>${Math.max(...m)}</b></p>`+tb(['Ngày','Bài','Điểm','Đúng','Thời gian'],h.map(x=>[new Date(x.at).toLocaleDateString('vi-VN'),x.title,x.score,`${x.ok}/${x.total}`,fmt(x.sec)]))})():'<p>Chưa có bài nào. Hãy vào “Luyện tập” để bắt đầu.</p>'}</div>`}
+async function teacher(){const v=$('#v');v.innerHTML='<div class="card">Đang tải dữ liệu…</div>';let rs=[];try{rs=(await dbh.collection('results').get()).docs.map(d=>d.data())}catch(e){v.innerHTML='<div class="card">Không tải được dữ liệu.</div>';return}
+if(!rs.length){v.innerHTML='<div class="card"><h2>Chưa có kết quả</h2><p>Chia sẻ trang này cho học sinh với quyền Contributor để điểm tự động gửi về.</p></div>';return}
+const cs=[...new Set(rs.map(r=>r.cls))].sort(),av=a=>a.reduce((x,y)=>x+y,0)/a.length;
+const ct=cs.map(c=>{const a=rs.filter(r=>r.cls==c);return [c,new Set(a.map(r=>r.name)).size,a.length,av(a.map(r=>r.score)).toFixed(1),Math.max(...a.map(r=>r.score))]});
+const sel=window.fc||'';const list=rs.filter(r=>!sel||r.cls==sel);const st={};list.forEach(r=>{const k=r.cls+'|'+r.name;(st[k]=st[k]||[]).push(r)});
+const rows=Object.values(st).map(a=>{a.sort((x,y)=>y.at-x.at);return [a[0].name,a[0].cls,a.length,av(a.map(r=>r.score)).toFixed(1),a[0].score,a[0].title]}).sort((x,y)=>y[3]-x[3]);
+v.innerHTML=`<div class="card"><h2>Thống kê theo lớp</h2>${tb(['Lớp','Học sinh','Lượt làm','Điểm TB','Cao nhất'],ct)}</div><div class="card"><h2>Thống kê theo học sinh</h2><select onchange="window.fc=this.value;teacher()"><option value="">Tất cả lớp</option>${cs.map(c=>`<option ${c==sel?'selected':''}>${c}</option>`).join('')}</select>${tb(['Họ tên','Lớp','Lượt','Điểm TB','Gần nhất','Bài gần nhất'],rows)}</div>`}
+who();nav();draw();
+(async()=>{try{const u=await claude.use('user');dbh=await claude.use('db');isT=!!(u&&await u.canEdit()&&dbh);nav()}catch(e){}})();
+</script></body></html>
